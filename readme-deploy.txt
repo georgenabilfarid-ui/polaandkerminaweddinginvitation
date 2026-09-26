@@ -1,14 +1,14 @@
-Pola & Kermina Wedding Invitation
+POLA & KERMINA — V6 WEDDING INVITATION
 
-IMPORTANT FOR NETLIFY:
-Upload the contents of THIS FOLDER (the folder containing index.html and assets), not a parent folder.
-The folder structure must be:
-index.html
-assets/couple.jpg
-assets/church.jpg
-assets/venue.jpg
-assets/wedding-song.mp3
+Updates in V6
+- Added the new couple photo from the latest upload (already present as couple-moment.jpg).
+- Updated the WhatsApp recipient: Kermina = +20 12 2738 3894.
+- Kept Pola on the other existing WhatsApp number: +20 12 8124 7473.
+- Adjusted the ceremony card so the supplied church photo is not incorrectly labeled as Saint Mina Church / Hurghada.
+- Adjusted the reception card to match the Jomana branding visible in the supplied venue photo: Jomana Wedding & Convention Center.
+- Kept the existing reception map button.
 
-For Netlify Drop, unzip this package first, then drag the Pola-Kermina-netlify-ready folder onto the Drop area.
+NETLIFY
+Upload the CONTENTS of this folder to the existing site's Deploys page to update the current site.
 
-Music starts when the guest taps TAP TO OPEN, because browsers block background autoplay until a user interaction.
+V9 NOTES: Restored Saint Mina Church, Hurghada, Red Sea, Egypt details and church map link. Replaced church photo with the newly supplied exterior church photo. Automatic scroll now starts 2.2 seconds after opening and continues gently to the end.
