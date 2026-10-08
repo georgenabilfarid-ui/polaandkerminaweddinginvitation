@@ -814,7 +814,6 @@ footer{background:#171211;border-top:1px solid rgba(225,193,135,.14)}
 <!-- Opening -->
 <div id="opening">
   <div class="opening-photo" aria-hidden="true"></div>
-  <img class="opening-gates-gif" src="assets/villa-gates-photorealistic-opening.gif" alt="" aria-hidden="true">
   <div class="opening-inner">
     <button class="open-btn" id="openInvitation" type="button" aria-label="Tap to open invitation"><span class="en">TAP TO OPEN</span><span class="ar">اضغط لفتح الدعوة</span><span class="open-arrow">↗</span></button>
   </div>
@@ -919,7 +918,7 @@ footer{background:#171211;border-top:1px solid rgba(225,193,135,.14)}
       <div class="event-list">
         <!-- CHURCH PHOTO: ceremony -->
         <article class="event-card reveal">
-          <div class="event-photo-wrap"><img src="assets/church.jpg" alt="Great Martyr Saint Mina Church in Hurghada, Red Sea, Egypt" loading="lazy"></div>
+          <div class="event-photo-wrap church-photo-wrap"><img class="church-gif" src="assets/church.gif" alt="Great Martyr Saint Mina Church in Hurghada, Red Sea, Egypt" loading="lazy"></div>
           <div class="event-copy">
             <div class="event-kicker"><span class="en">Church</span><span class="ar">الكنيسة</span></div>
             <div class="event-name"><span class="en">Great Martyr Saint Mina Church</span><span class="ar">كنيسة الشهيد العظيم مارمينا</span></div>
@@ -1089,7 +1088,7 @@ function sendWhatsApp(number){
   const text=`Dear Pola & Kermina ❤️\n\n${name?`From: ${name}\n`:''}${message||'Congratulations on your wedding! Wishing you a lifetime of love and happiness.'}`;
   window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');
 }
-$('#sendPola').addEventListener('click',()=>sendWhatsApp('+201281247473'));
+$('#sendPola').addEventListener('click',()=>sendWhatsApp('201227383894'));
 $('#sendKermina').addEventListener('click',()=>window.open('https://www.facebook.com/kermina.nabil.66886','_blank','noopener,noreferrer'));
 
 // Make textarea feel polished
@@ -1226,4 +1225,44 @@ html[dir="rtl"] .events .event-copy p:before{left:auto;right:0;transform:transla
   .events .event-time{font-size:8px !important;padding:8px 10px !important}
   .events .map-btn{width:100%;justify-content:center}
 }
+
+
+/* FINAL MOBILE PHOTO + CHURCH GIF FIX */
+.church-photo-wrap{background:#171311;overflow:hidden;}
+.church-photo-wrap .church-gif{
+  display:block;
+  width:100% !important;
+  height:100% !important;
+  max-width:100% !important;
+  object-fit:contain !important;
+  object-position:center center !important;
+  background:#171311;
+  transform:none !important;
+}
+@media(max-width:780px){
+  .church-photo-wrap,
+  .events .event-card .church-photo-wrap,
+  .events .event-card.reverse .church-photo-wrap{
+    width:100% !important;
+    height:275px !important;
+    min-height:275px !important;
+    max-width:100% !important;
+  }
+  .church-photo-wrap .church-gif{
+    width:100% !important;
+    height:100% !important;
+    object-fit:contain !important;
+  }
+}
+@media(max-width:480px){
+  .church-photo-wrap,
+  .events .event-card .church-photo-wrap,
+  .events .event-card.reverse .church-photo-wrap{
+    height:245px !important;
+    min-height:245px !important;
+  }
+}
+
+/* Never show a broken-image icon for a missing optional image. */
+img[aria-hidden="true"]{display:none !important;}
 </style>
