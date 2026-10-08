@@ -1089,8 +1089,13 @@ function sendWhatsApp(number){
   window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');
 }
 $('#sendPola').addEventListener('click',()=>sendWhatsApp('+201281247473'));
-$('#sendKermina').addEventListener('click',()=>window.open('https://www.facebook.com/kermina.nabil.66886','_blank','noopener,noreferrer'));
-
+$('#sendKermina').addEventListener('click',()=>{
+  window.open(
+    'https://m.me/kermina.nabil.66886',
+    '_blank',
+    'noopener,noreferrer'
+  );
+});
 // Make textarea feel polished
 $('#guestMessage').addEventListener('input',e=>{e.target.style.height='auto';e.target.style.height=Math.min(e.target.scrollHeight,330)+'px'; $('#messageCount').textContent=e.target.value.length});
 </script>
