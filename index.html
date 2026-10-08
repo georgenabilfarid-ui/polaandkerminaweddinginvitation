@@ -1089,14 +1089,19 @@ function sendWhatsApp(number){
   window.open(`https://wa.me/${number}?text=${encodeURIComponent(text)}`,'_blank','noopener,noreferrer');
 }
 $('#sendPola').addEventListener('click',()=>sendWhatsApp('201281247473'));
-$('#sendKermina').addEventListener('click',()=>{
-  window.open(
-    'https://m.me/kermina.nabil.66886',
-    '_blank',
-    'noopener,noreferrer'
-  );
-});
-// Make textarea feel polished
+document.querySelector('#sendKermina').addEventListener('click', () => {
+  const username = 'kermina.nabil.66886';
+  const appUrl = `fb-messenger://user-thread/${username}`;
+  const webUrl = `https://m.me/${username}`;
+
+  // Attempt to open the native app
+  window.location.href = appUrl;
+
+  // Fallback to web link if app doesn't open within 1.5 seconds
+  setTimeout(() => {
+    window.open(webUrl, '_blank', 'noopener,noreferrer');
+  }, 1500);
+});// Make textarea feel polished
 $('#guestMessage').addEventListener('input',e=>{e.target.style.height='auto';e.target.style.height=Math.min(e.target.scrollHeight,330)+'px'; $('#messageCount').textContent=e.target.value.length});
 </script>
 </body>
